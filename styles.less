@@ -1,0 +1,97 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  //color: white;
+  //background-color: hsl(180, 24%, 12%);
+  font-size: 1em;
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  border-color: red;
+}
+
+/* my custom stuffs
+***********************************************
+*/
+
+//highlight active tab
+li.texteditor.tab.active {
+  border-top-color: white;
+  border-color: white;
+  margin-top: 1px;
+  padding-top: 5px;
+  border-width: 1px;
+  border-style: solid;
+}
+li.texteditor.tab.active > div.title {
+  font-weight: 600;
+}
+
+//error notifications wider
+atom-notifications atom-notification.has-detail {
+  width: 80em;
+}
+
+//code numbers gutter
+.gutter-container {
+  background-color: hsl(123, 0%, 20%) !important;
+  border: 0;
+  padding: 0px 0px 0px -5px;
+  margin: 0px 0px 0px 0px;
+  min-width: 60px;
+  max-width: 60px;
+}
+.vertical-scrollbar {
+  min-width: 60px;
+}
+.horizontal-scrollbar {
+  min-height: 60px;
+}
+//custom scrollbars
+.scrollbars-visible-always {
+  ::-webkit-scrollbar {
+    min-width: 15px;
+    min-height: 15px;
+    &-track {
+      background-color: hsl(0, 0%, 20%) !important;
+    }
+    &-track:hover {
+      background-color: hsl(0, 0%, 15%) !important;
+      box-shadow: 2px 2px 16px black inset;
+    }
+    &-thumb {
+      background-color: hsl(0, 0%, 25%) !important;
+      border: 0px;
+      border-radius: 5px;
+    }
+    &-thumb:hover {
+      background-color: #111;
+      box-shadow: 0 0 8px grey inset;
+    }
+    &-thumb:active {
+      background-color: #444;
+      box-shadow: 0 0 8px white inset;
+    }
+  }
+}
