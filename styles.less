@@ -35,12 +35,18 @@ atom-text-editor .cursor {
 ***********************************************
 */
 
+//highlight each 10th row number
+.line-number[data-buffer-row$="9"] {
+  border-top: 1px #996666 solid;
+  color: #996666 !important;
+}
+
 //highlight active tab
 li.texteditor.tab.active {
-  border-top-color: white;
   border-color: white;
+  border-bottom-color: #222;
   margin-top: 1px;
-  padding-top: 5px;
+  padding-top: 2px;
   border-width: 1px;
   border-style: solid;
 }
