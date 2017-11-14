@@ -36,9 +36,12 @@ atom-text-editor .cursor {
 */
 
 //highlight each 10th row number
+.line-number[data-buffer-row$="8"] {
+  border-bottom: 3px #21252b solid;
+  margin-bottom: -3px;
+}
 .line-number[data-buffer-row$="9"] {
-  border-top: 1px #996666 solid;
-  color: #996666 !important;
+  color: #aa9999 !important;
 }
 
 //highlight active tab
