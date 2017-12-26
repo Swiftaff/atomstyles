@@ -37,11 +37,12 @@ atom-text-editor .cursor {
 
 //highlight each 10th row number
 .line-number[data-buffer-row$="8"] {
-  border-bottom: 3px #21252b solid;
+  border-bottom: 3px @text-color solid;
   margin-bottom: -3px;
 }
 .line-number[data-buffer-row$="9"] {
-  color: #aa9999 !important;
+  //color: #aa9999 !important;
+  color: @text-color-highlight !important;
 }
 
 //highlight active tab
@@ -64,7 +65,7 @@ atom-notifications atom-notification.has-detail {
 
 //code numbers gutter
 .gutter-container {
-  background-color: hsl(123, 0%, 20%) !important;
+  background-color: @tree-view-background-color !important;
   border: 0;
   padding: 0px 0px 0px -5px;
   margin: 0px 0px 0px 0px;
@@ -83,14 +84,14 @@ atom-notifications atom-notification.has-detail {
     min-width: 15px;
     min-height: 15px;
     &-track {
-      background-color: hsl(0, 0%, 20%) !important;
+      background-color: @tree-view-background-color !important;
     }
     &-track:hover {
-      background-color: hsl(0, 0%, 15%) !important;
+      background-color: @tree-view-background-color !important;
       box-shadow: 2px 2px 16px black inset;
     }
     &-thumb {
-      background-color: hsl(0, 0%, 25%) !important;
+      background-color: red !important;
       border: 0px;
       border-radius: 5px;
     }
